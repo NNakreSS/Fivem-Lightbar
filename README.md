@@ -1,6 +1,8 @@
 # Fivem-Lightbar
 Add lightbar to tools, manage them, manage lights and sounds
 
+discord : https://discord.gg/HDAVCF7A
+
 start by adding two files named lightbar and nakres_lightbar to the server.
 
 By adding your steam, discord, or fivem id to admin via Cofig, you can authorize players to "add_lightbar_perm id number" in the game, if you leave the bool blank, you can only access the lightbar menu by typing 1 instead of number, authorizing the player to use the "add_lightbar_perm" command.
