@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+        integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>nakres_lightbar:menu</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="menu" class="border-gradient">
+            <div id="leftMenu">
+                <div class="button" id="hideCam">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div id="camSetting">
+                    <button class="button camBtn" data-type="move-cam" data-value="left"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="right"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="forward"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="backward"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="up"><i class="fa-solid fa-arrow-up"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="down"><i class="fa-solid fa-arrow-down"></i></button>
+                    <button id="camRot" class="button camBtn"><i class="fa-solid fa-group-arrows-rotate"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="pleft"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="pright"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="pup"><i class="fa-solid fa-arrow-up"></i></button>
+                    <button class="button camBtn" data-type="move-cam" data-value="pdown"><i class="fa-solid fa-arrow-down"></i></button>
+                </div>
+            </div>
+            <div id="head">
+                <h1>NakreS Lightbar Menu</h1>
+            </div>
+
+            <div id="selectLB">
+                <form action="javascript:addLightbar()">
+                    <label for="lightbars">Lightbar Model</label><br>
+                    <select id="lightbars" name="lightbars">
+                        <option value="fbiold">fbi old</option>
+                        <option value="lightbarTwoSticks">lightbar Two Sticks</option>
+                        <option value="longLightbar">longLightbar</option>
+                        <option value="longLightbarRed">longLightbar Red</option>
+                    </select>
+                    <input class="button" type="submit" value="ADD">
+                </form>
+            </div>
+
+            <div id="installedLB">
+                <form>
+                    <fieldset>
+                        <legend>lightbars</legend><br>
+                        <div id="vehLightbars">
+                            <!-- <div>
+                                <input type="radio" id="..." name="..." value="..."
+                                checked>
+                                <label for="...">...</label>
+                            </div><br> -->
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div id="setting">
+                <label for="speed">move speed</label><br>
+                <input value="0.01" type="number" min=".01" step=".01" name="speed" id="speed"><br>
+                <div id="settingsBtn">
+                    <div class="buttonsdiv">
+                        <button class="button" data-type="move" data-value="left"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="button" data-type="move" data-value="right"><i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="button" data-type="move" data-value="forward"><i class="fa-solid fa-arrow-up"></i></button>
+                        <button class="button" data-type="move" data-value="backward"><i class="fa-solid fa-arrow-down"></i></button>
+                    </div>
+                    <div class="buttonsdiv">
+                        <button class="button" data-type="move" data-value="up"><i class="fa-solid fa-arrow-up-short-wide"></i></button>
+                        <button class="button" data-type="move" data-value="down"><i
+                                class="fa-solid fa-arrow-down-short-wide"></i></i></button>
+                    </div>
+                    <div class="buttonsdiv">
+                        <button class="button" data-type="move" data-value="+Xrot">+xRot</button>
+                        <button class="button" data-type="move" data-value="-Xrot">-xRot</button>
+                        <button class="button" data-type="move" data-value="+Yrot">+yRot</button>
+                        <button class="button" data-type="move" data-value="-Yrot">-yRot</button>
+                    </div>
+                    <div class="buttonsdiv"> 
+                        <button class="button" data-type="move" data-value="+Zrot">+zRot</button>
+                        <button class="button" data-type="move" data-value="-Zrot">-zRot</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <button class="button" data-value="save">SAVE</button>
+                <button class="button" data-value="cancel">CANCEL</button>
+                <button class="button" data-value="delete-main">DELETE</button>
+            </div>
+
+        </div>
+    </div>
+    <div id="alertBox" class="border-gradient">
+        <p>Yeni eklenen ve kaydedilmeyen ışıklar kaldırılacak onaylıyor musun ?</p>
+        <div class="buttonsdiv"> 
+        <button class="button" data-value="yes">YES</button>
+        <button class="button" data-value="no">NO</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

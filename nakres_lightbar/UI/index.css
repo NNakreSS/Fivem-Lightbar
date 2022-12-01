@@ -1,0 +1,204 @@
+body{background: none !important;}
+
+ @font-face{
+  font-family:'jack';
+  src: url('./fonts/jack.ttf');
+ }
+
+#container{
+    display: none;
+    font-family: "jack";
+}
+
+#menu{
+    float: right;
+    color: rgb(204, 209, 213);
+    width: 350px;
+    height: 670px;
+    margin: auto;
+    margin-top: 300px;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size:x-large;
+    font-weight:200;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#alertBox{
+  display: none;
+  padding-top: 20PX;
+  z-index: 99;
+  font-family: "jack";
+  color: rgb(231, 228, 228);
+  width: 350px;
+  height: 130px;
+  margin: auto;
+  margin-top: 300px;
+  background-color: rgba(0, 0, 0, 0.766);
+  font-size:x-large;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#head{
+    color: rgb(203, 230, 238);
+    padding-top: 5px;
+}
+
+#selectLB{
+    margin-top:20px;
+}
+
+#installedLB{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#vehLightbars{
+    margin: auto;
+    background-color: rgba(74, 73, 75, 0.188);
+    width: 260px;
+    height: 100px;
+    overflow: auto;
+    border-radius: 15px;
+    border: 5px solid rgba(20, 20, 20, 0.077);
+    transition-duration:.5s;
+}
+
+#vehLightbars div{
+    float: left;
+    margin-left: 20px;
+}
+
+#setting{
+    margin-top: 20px;
+}
+
+#speed{
+  border-radius: 5px;
+  border: 1px solid #969696b6;
+  box-shadow: rgba(172, 171, 171, 0.785) 0 2px 0 0;
+  font-size: 15px;
+}
+
+#footer{
+    margin-top: 30px;
+}
+
+#leftMenu{
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  z-index: -2;
+  left: -20px;
+  top: 5px;
+}
+
+#leftMenu #hideCam{
+  overflow: hidden !important;;
+  position: absolute;
+  cursor:pointer;
+  width: 10px;
+  height: 30px;
+  top: 0;
+  left: 2px;
+  color: #f6f0f0;
+  padding: 5px .5em;
+  border-radius: 2px;
+  background-color: #090909;
+  transition-duration:.6s;
+}
+
+#camSetting{
+  display: none;
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  left: -45px;
+  padding: 15px;
+}
+
+.camBtn{
+  margin-top: 10px;
+}
+
+#camRot{
+  background-color: #090909ee;
+  border-radius: 20%;
+  box-shadow: none;
+  color: #f6f6f6;
+}
+
+.button {
+  background-color: #f6f7f8;
+  border-radius: 3px;
+  border: 1px solid #969696b6;
+  box-shadow: rgba(172, 171, 171, 0.785) 0 4px 0 0;
+  box-sizing: border-box;
+  color: #0c0d0e;
+  cursor: pointer;
+  font-family: "jack";
+  font-size: 15px;
+  font-weight:bold;
+  padding: 8px .8em;
+  text-align: center;
+  white-space: nowrap;
+  transition-duration:.3s;
+
+}
+
+.button:hover {
+  background-color: #2d3336;
+  color: #f6f6f6;
+}
+
+.button:active {
+  color: #06b6fb;
+  box-shadow: none;
+}
+
+.buttonsdiv{
+    margin: auto;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(79, 79, 79); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(238, 238, 238); 
+    border-radius: 10px;
+  }
+
+  .border-gradient {
+    --angle: 0deg;
+    border: .4vmin solid;
+    border-image: linear-gradient(var(--angle), rgb(246, 51, 17),rgba(0, 0, 0, 0.667),rgba(0, 76, 255, 0.738)  ) 1;
+    animation: 6s rotate linear infinite;
+  }
+
+
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
