@@ -17,3 +17,4 @@ Left CONTROL to turn on the siren lights, use the H key to turn on the sounds an
 3.exports.nakres_lightbar:loadLightbarInCar(vehicle); you can add the code to the vehicle spawned function of your garage script to reproduce the created lightbars
 4.Fully optimized 0.0 to 0.1 resmons
 ![image](https://user-images.githubusercontent.com/87872407/205168172-b54ea105-919e-4917-924d-6f83a61dfed1.png)
+https://www.youtube.com/watch?v=_55viear_LE
