@@ -5,8 +5,8 @@ discord : https://discord.gg/HDAVCF7A
 
 start by adding two files named lightbar and nakres_lightbar to the server.
 
-By adding your steam, discord, or fivem id to admin via Cofig, you can authorize players to "add_lightbar_perm id number" in the game, if you leave the bool blank, you can only access the lightbar menu by typing 1 instead of number, authorizing the player to use the "add_lightbar_perm" command.
-    bkz: adminIdentities = { "fivem:1082143", "discord:668001028939055124" }, --admin fivem id, discrod id or lisans id
+By adding your steam, discord, or fivem id to admin via Cofig, you can authorize players to "add_lightbar_perm id number" in the game, if you leave the number blank, you can only access the lightbar menu by typing 1 instead of number, authorizing the player to use the "add_lightbar_perm" command.
+    bkz: adminIdentities = { "fivem:1082143", "discord:668001028939055124" }, --fivem id, discrod id or hex id
 
 After you have been authorized to add lightbar to the vehicle, use /addlb, go to the vehicle and press E to access the menu.
 
