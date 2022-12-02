@@ -1,5 +1,5 @@
 # Fivem-Lightbar
-Add lightbar to tools, manage them, manage lights and sounds
+Add lightbar to vehicles, manage them, manage lights and sounds
 
 discord : https://discord.gg/HDAVCF7A
 
