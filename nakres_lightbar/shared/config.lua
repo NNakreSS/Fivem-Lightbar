@@ -9,6 +9,7 @@ NakreS = {
     those with admin authority can use this command to authorize players , bkz: /add_lightbar_perm id bool ,
     if the bool part is entered as 1, it recognizes the user as admin so that lightbar can authorize it (applicable only to this script)]]
     addLightbarCommand = "addlb", -- command to start the lightbar installation
-    adminIdentities = { "fivem:1082143", "discord:668001028939055124" }, --admin fivem id, discrod id or lisans id
-    NoNeedPerm = false -- if set true, all players can add lightbar
+    adminIdentities = { "fivem:1221**1", "discord:68866******9699" }, --admin fivem id, discrod id or lisans id
+    NoNeedPerm = false, -- if set true, all players can add lightbar,
+    BlacklistVehicle = {"drafter","adder"}-- vehicle name for blacklisted vehicle  , built-in police tools are automatically in blacklist , example:"police"
 }

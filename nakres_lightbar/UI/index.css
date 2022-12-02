@@ -31,7 +31,7 @@ body{background: none !important;}
   font-family: "jack";
   color: rgb(231, 228, 228);
   width: 350px;
-  height: 130px;
+  height: 140px;
   margin: auto;
   margin-top: 300px;
   background-color: rgba(0, 0, 0, 0.766);
@@ -66,9 +66,9 @@ body{background: none !important;}
     transition-duration:.5s;
 }
 
-#vehLightbars div{
+#vehLightbars div input{
     float: left;
-    margin-left: 20px;
+    padding-left: 15px;
 }
 
 #setting{

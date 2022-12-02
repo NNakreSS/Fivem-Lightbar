@@ -117,8 +117,10 @@ function searchNearVehicle()
             local nearveh = GetClosestVehicle(pCoord, 2.5, 0, 70)
             local vCoords, plate = GetEntityCoords(nearveh), GetVehicleNumberPlateText(nearveh)
             local class = GetVehicleClass(nearveh)
-            local unBlackList = (class ~= 8 and class ~= 13) and true or false
-            if nearveh ~= 0 and unBlackList then
+            local isVehicle = (class ~= 8 and class ~= 13) and true or false
+            local vehicleName = GetDisplayNameFromVehicleModel(GetEntityModel(nearveh))
+            local blackListVeh = controlBlackList(vehicleName)
+            if nearveh ~= 0 and isVehicle and not blackListVeh then
                 sleep = 5
                 ShowFloatingHelpNotificationsc("[E] Lightbars Menu", vCoords, plate)
                 if IsControlJustReleased(1, 51) then
@@ -136,6 +138,15 @@ function searchNearVehicle()
             Citizen.Wait(sleep)
         end
     end)
+end
+
+function controlBlackList(vehName)
+    for index, name in ipairs(NakreS.BlacklistVehicle) do
+        if vehName == name then
+            return true    
+        end
+    end
+    return false
 end
 
 function getNearVehicleLightbars(plate)

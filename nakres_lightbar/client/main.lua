@@ -55,7 +55,6 @@ _On('nakres_lightbar:client:getSirenData', function(data)
     ToggleLightbarAudio = data
 end)
 
-
 RegisterNUICallback("addLightbar", function(data, cb)
     local lModel = data.modelName
     createLightbarCar(lModel)
