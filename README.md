@@ -1,7 +1,7 @@
 # Fivem-Lightbar
 Add lightbar to vehicles, manage them, manage lights and sounds
 
-discord : https://discord.gg/HDAVCF7A
+discord : [NakreS Development](https://link.nakres.dev/discord)
 
 start by adding two files named lightbar and nakres_lightbar to the server.
 
